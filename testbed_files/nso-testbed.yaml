@@ -22,4 +22,4 @@ devices:
         ip: 127.0.0.1
         port: 2024 
 
-Reference: https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html
+# Reference: https://pubhub.devnetcloud.com/media/unicon/docs/user_guide/connection.html

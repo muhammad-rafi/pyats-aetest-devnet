@@ -1,0 +1,32 @@
+testbed:
+  name: cml_testbed file
+
+# pyats validate testbed cml_testbed.yaml
+# pyats shell --testbed-file cml_testbed.yaml
+
+devices:
+  cml-core-rtr01:
+    os: iosxr
+    type: router
+    connections:
+      cli:
+        ip: 10.251.13.203
+        protocol: ssh
+        port: 22
+        settings:
+          # Unicon connection settings
+          GRACEFUL_DISCONNECT_WAIT_SEC: 0
+          POST_DISCONNECT_WAIT_SEC: 0
+          CONNECTION_TIMEOUT: 10
+          ssh_options: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+    credentials:
+      default:
+        username: admin
+        password: C1sco123
+        # username: '%SECRET'
+        # password: '%SECRET'
+        # password: '%ASK{}'
+        # password: "%ENV{PYATS_PASSWORD}"
+    # custom:
+    #   ssh_options: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
